@@ -1,0 +1,137 @@
+/**
+ * DecodeLabs Project 1 - CSS Custom Properties (Variables)
+ *
+ * Implements 2025 Aesthetic Color Palette, Typography Hierarchy,
+ * and Strict 8px Spacing Grid System.
+ */
+
+:root {
+  /* ==========================================================================
+     1. Color Palette (2025 Aesthetics)
+     ========================================================================== */
+  
+  /* Primary: Mocha Mousse - Evokes warmth, grounding & architectural stability */
+  --color-primary: #A6856F;
+  --color-primary-dark: #8E6C57;
+  --color-primary-light: #BFA28E;
+  --color-primary-subtle: rgba(166, 133, 111, 0.12);
+
+  /* Secondary: Ethereal Blue - Evokes clarity, trust & modern high-tech poise */
+  --color-secondary: #A0D4E0;
+  --color-secondary-dark: #74B8C7;
+  --color-secondary-light: #C4E9F2;
+  --color-secondary-subtle: rgba(160, 212, 224, 0.18);
+
+  /* Accent: Moonlit Grey - Neutral refinement & visual balance */
+  --color-accent: #F2F0EA;
+  --color-accent-hover: #E8E5DC;
+  
+  /* Neutral Text & Foundation Colors */
+  --color-text-dark: #2C2C2C;
+  --color-text-muted: #696560;
+  --color-text-light: #FFFFFF;
+  
+  /* Surface & Background Colors */
+  --color-bg-page: #F9F8F6;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-elevated: #FFFFFF;
+  
+  /* Structural Border & Divider */
+  --color-border: #E0DDD8;
+  --color-border-dark: #C9C5BF;
+
+  /* Semantic Feedback Colors */
+  --color-success: #3D8C6F;
+  --color-success-bg: #E8F5EF;
+  --color-error: #D94848;
+  --color-error-bg: #FDF0F0;
+  --color-focus: #5394A4;
+
+  /* ==========================================================================
+     2. Typography Stack
+     - Maximum 2 font families, 3 weights total (400, 500/600, 700)
+     - Headlines: 1.2 line height, 0.5px letter spacing
+     - Body: 1.6 line height
+     ========================================================================== */
+
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  --letter-spacing-heading: 0.5px;
+  --letter-spacing-normal: 0;
+
+  /* Type Scale */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
+  --font-size-4xl: 3.25rem;   /* 52px */
+
+  /* ==========================================================================
+     3. 8px Spacing Grid System
+     ========================================================================== */
+
+  --spacing-xs: 4px;   /* xs: 4px (small gaps) */
+  --spacing-sm: 8px;   /* sm: 8px (small spacing) */
+  --spacing-md: 16px;  /* md: 16px (standard spacing) */
+  --spacing-lg: 24px;  /* lg: 24px (medium spacing) */
+  --spacing-xl: 32px;  /* xl: 32px (large spacing) */
+  --spacing-xxl: 48px; /* xxl: 48px (extra large) */
+  --spacing-3xl: 64px; /* 3xl: 64px (section padding) */
+  --spacing-4xl: 80px; /* 4xl: 80px (hero padding) */
+
+  /* ==========================================================================
+     4. Elevation & Shadows
+     ========================================================================== */
+
+  --shadow-sm: 0 2px 4px rgba(44, 44, 44, 0.04);
+  --shadow-md: 0 4px 12px rgba(44, 44, 44, 0.06), 0 1px 3px rgba(44, 44, 44, 0.04);
+  --shadow-lg: 0 12px 28px rgba(44, 44, 44, 0.08), 0 3px 8px rgba(44, 44, 44, 0.05);
+  --shadow-hover: 0 16px 36px rgba(166, 133, 111, 0.16), 0 4px 12px rgba(44, 44, 44, 0.06);
+
+  /* ==========================================================================
+     5. Borders & Radii
+     ========================================================================== */
+
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     6. Transitions & Animations
+     ========================================================================== */
+
+  --transition-fast: 150ms ease;
+  --transition-standard: 300ms ease;
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ==========================================================================
+     7. Layout Constraints & Z-Indices
+     ========================================================================== */
+
+  --container-max-width: 1280px;
+  --container-narrow-width: 860px;
+  --header-height: 72px;
+  --sidebar-width: 280px;
+
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-header: 500;
+  --z-drawer: 1000;
+  --z-modal: 1100;
+  --z-toast: 1200;
+}

@@ -1,0 +1,166 @@
+/**
+ * DecodeLabs Project 1 - Responsive Breakpoints & Media Queries
+ *
+ * Implements Mobile-First Progressive Enhancement:
+ * - Mobile: 320px - 767px (Default)
+ * - Tablet: 768px - 1023px
+ * - Desktop: 1024px - 1439px
+ * - Extra Large: 1440px and above
+ */
+
+/* ==========================================================================
+   1. Tablet Breakpoint (768px and up)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  /* Container Padding Expansion */
+  .container {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+
+  /* Navigation Bar Transitions to Inline Horizontal Layout */
+  .hamburger-toggle {
+    display: none; /* Hide hamburger toggle on tablet and desktop */
+  }
+
+  .nav-menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    width: auto;
+  }
+
+  .nav-item {
+    width: auto;
+  }
+
+  .nav-link {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Hero Section 2-Column Balanced Layout */
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--spacing-xxl);
+  }
+
+  .hero-stats {
+    gap: var(--spacing-lg);
+  }
+
+  /* Two-Column Split Layouts (About, Contact) */
+  .split-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+  }
+
+  /* Content Grids Tablet: 2 Columns */
+  .content-grid--services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-grid--portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer Tablet Layout: 2 Columns Grid */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================================
+   2. Desktop Breakpoint (1024px and up)
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: var(--spacing-4xl);
+    padding-bottom: var(--spacing-4xl);
+  }
+
+  /* Nav Links Spacing on Desktop */
+  .nav-list {
+    gap: var(--spacing-md);
+  }
+
+  .nav-link {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+
+  /* Content Grid Desktop: 4 Columns for Services */
+  .content-grid--services {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+  }
+
+  /* Portfolio 2x2 Grid with generous spacing */
+  .content-grid--portfolio {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
+
+  /* Sidebar Layout: 1fr + Sticky Sidebar (280px-300px) */
+  .sidebar-layout {
+    grid-template-columns: 1fr var(--sidebar-width);
+    align-items: start;
+    gap: var(--spacing-xxl);
+  }
+
+  .sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--spacing-lg));
+  }
+
+  .sidebar-toggle-btn {
+    display: none; /* Always visible on desktop */
+  }
+
+  /* Footer Desktop Layout: 4 Columns */
+  .footer-grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+    gap: var(--spacing-xxl);
+  }
+}
+
+/* ==========================================================================
+   3. Large Desktop Breakpoint (1440px and up)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  :root {
+    --container-max-width: 1360px;
+  }
+
+  .hero {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .hero-image {
+    max-height: 480px;
+  }
+}

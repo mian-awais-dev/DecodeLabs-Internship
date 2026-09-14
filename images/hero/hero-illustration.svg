@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="100%" height="100%" role="img" aria-label="Modern responsive web interface illustration">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F8F6" />
+      <stop offset="100%" stop-color="#F2F0EA" />
+    </linearGradient>
+    <linearGradient id="primaryMocha" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A6856F" />
+      <stop offset="100%" stop-color="#8E6C57" />
+    </linearGradient>
+    <linearGradient id="secondaryBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A0D4E0" />
+      <stop offset="100%" stop-color="#72BDCE" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#2C2C2C" flood-opacity="0.08" />
+    </filter>
+    <filter id="cardShadow" x="-15%" y="-15%" width="135%" height="135%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#A6856F" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Elements -->
+  <circle cx="120" cy="110" r="90" fill="#A0D4E0" opacity="0.25" />
+  <circle cx="480" cy="380" r="110" fill="#A6856F" opacity="0.15" />
+  <circle cx="500" cy="120" r="60" fill="#F2F0EA" opacity="0.8" />
+
+  <!-- Main Desktop Window Mockup -->
+  <g filter="url(#softShadow)">
+    <rect x="60" y="50" width="460" height="300" rx="16" fill="#FFFFFF" stroke="#E0DDD8" stroke-width="1.5" />
+    
+    <!-- Window Bar -->
+    <rect x="60" y="50" width="460" height="38" rx="16" fill="#F9F8F6" />
+    <path d="M 60 72 L 520 72" stroke="#E0DDD8" stroke-width="1" />
+    <!-- Traffic lights -->
+    <circle cx="82" cy="69" r="5" fill="#E88B8B" />
+    <circle cx="98" cy="69" r="5" fill="#E5C158" />
+    <circle cx="114" cy="69" r="5" fill="#75C99E" />
+    <!-- Search / URL Pill -->
+    <rect x="150" y="61" width="220" height="16" rx="8" fill="#FFFFFF" stroke="#E0DDD8" stroke-width="1" />
+    <text x="210" y="73" font-family="'Roboto', sans-serif" font-size="9" fill="#A6856F" font-weight="500">decodelabs.tech/app</text>
+
+    <!-- App Header & Navigation Inside Mockup -->
+    <rect x="80" y="96" width="36" height="10" rx="3" fill="#A6856F" />
+    <rect x="126" y="98" width="28" height="6" rx="3" fill="#E0DDD8" />
+    <rect x="162" y="98" width="28" height="6" rx="3" fill="#E0DDD8" />
+    <rect x="198" y="98" width="28" height="6" rx="3" fill="#E0DDD8" />
+    <rect x="440" y="94" width="60" height="14" rx="7" fill="url(#secondaryBlue)" />
+
+    <!-- Split Content inside Desktop -->
+    <!-- Left Hero block -->
+    <rect x="80" y="126" width="170" height="18" rx="4" fill="#2C2C2C" />
+    <rect x="80" y="152" width="210" height="8" rx="3" fill="#A0A0A0" opacity="0.6" />
+    <rect x="80" y="166" width="160" height="8" rx="3" fill="#A0A0A0" opacity="0.6" />
+    <rect x="80" y="180" width="120" height="8" rx="3" fill="#A0A0A0" opacity="0.6" />
+    <rect x="80" y="202" width="80" height="24" rx="6" fill="url(#primaryMocha)" />
+    <rect x="170" y="202" width="75" height="24" rx="6" fill="#F2F0EA" stroke="#A6856F" stroke-width="1" />
+
+    <!-- Right Grid Cards Inside Window -->
+    <rect x="310" y="126" width="90" height="100" rx="10" fill="#F9F8F6" stroke="#E0DDD8" />
+    <circle cx="330" cy="148" r="10" fill="#A0D4E0" />
+    <rect x="325" y="168" width="55" height="6" rx="3" fill="#2C2C2C" />
+    <rect x="325" y="180" width="60" height="4" rx="2" fill="#A6856F" opacity="0.6" />
+    <rect x="325" y="190" width="45" height="4" rx="2" fill="#A6856F" opacity="0.6" />
+
+    <rect x="410" y="126" width="90" height="100" rx="10" fill="#F9F8F6" stroke="#E0DDD8" />
+    <circle cx="430" cy="148" r="10" fill="#A6856F" />
+    <rect x="425" y="168" width="55" height="6" rx="3" fill="#2C2C2C" />
+    <rect x="425" y="180" width="60" height="4" rx="2" fill="#A0D4E0" opacity="0.8" />
+    <rect x="425" y="190" width="45" height="4" rx="2" fill="#A0D4E0" opacity="0.8" />
+
+    <!-- Bottom Data Bar in Mockup -->
+    <rect x="80" y="246" width="420" height="78" rx="10" fill="#F9F8F6" />
+    <path d="M 95 295 C 130 265, 170 290, 210 270 C 250 250, 290 280, 340 260 C 390 240, 440 280, 485 255" fill="none" stroke="#A6856F" stroke-width="3" stroke-linecap="round" />
+    <path d="M 95 305 C 130 285, 170 300, 210 285 C 250 270, 290 295, 340 280 C 390 265, 440 295, 485 275" fill="none" stroke="#A0D4E0" stroke-width="2.5" stroke-dasharray="4 3" stroke-linecap="round" />
+  </g>
+
+  <!-- Overlapping Mobile Mockup -->
+  <g filter="url(#cardShadow)">
+    <rect x="380" y="200" width="160" height="260" rx="24" fill="#FFFFFF" stroke="#E0DDD8" stroke-width="2" />
+    <!-- Mobile Screen Bezel & Dynamic Island -->
+    <rect x="435" y="210" width="50" height="10" rx="5" fill="#2C2C2C" />
+    <!-- Mobile Content -->
+    <rect x="398" y="235" width="70" height="10" rx="4" fill="#2C2C2C" />
+    <rect x="398" y="252" width="124" height="60" rx="12" fill="url(#secondaryBlue)" opacity="0.9" />
+    <text x="410" y="280" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" fill="#2C2C2C">Mobile-First</text>
+    <text x="410" y="296" font-family="'Roboto', sans-serif" font-size="9" fill="#2C2C2C" opacity="0.8">Responsive &amp; Fast</text>
+
+    <!-- Mobile mini cards -->
+    <rect x="398" y="322" width="124" height="34" rx="8" fill="#F9F8F6" stroke="#E0DDD8" />
+    <circle cx="415" cy="339" r="7" fill="#A6856F" />
+    <rect x="428" y="333" width="75" height="5" rx="2" fill="#2C2C2C" />
+    <rect x="428" y="342" width="45" height="4" rx="2" fill="#8E6C57" />
+
+    <rect x="398" y="364" width="124" height="34" rx="8" fill="#F9F8F6" stroke="#E0DDD8" />
+    <circle cx="415" cy="381" r="7" fill="#A0D4E0" />
+    <rect x="428" y="375" width="70" height="5" rx="2" fill="#2C2C2C" />
+    <rect x="428" y="384" width="50" height="4" rx="2" fill="#72BDCE" />
+
+    <!-- Mobile Home Indicator -->
+    <rect x="430" y="446" width="60" height="4" rx="2" fill="#2C2C2C" opacity="0.3" />
+  </g>
+
+  <!-- Floating Floating Badge 1: 100% Responsive Grid -->
+  <g filter="url(#cardShadow)">
+    <rect x="25" y="250" width="165" height="58" rx="12" fill="#FFFFFF" stroke="#E0DDD8" stroke-width="1.5" />
+    <rect x="37" y="262" width="34" height="34" rx="8" fill="#A0D4E0" opacity="0.3" />
+    <path d="M 46 273 L 62 273 M 46 279 L 62 279 M 46 285 L 62 285" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round" />
+    <text x="79" y="276" font-family="'Montserrat', sans-serif" font-weight="700" font-size="11" fill="#2C2C2C">CSS Grid &amp; Flex</text>
+    <text x="79" y="291" font-family="'Roboto', sans-serif" font-size="9" fill="#78736E">Pure Vanilla CSS3</text>
+  </g>
+
+  <!-- Floating Floating Badge 2: Performance 99+ -->
+  <g filter="url(#cardShadow)">
+    <rect x="180" y="360" width="170" height="58" rx="12" fill="#FFFFFF" stroke="#E0DDD8" stroke-width="1.5" />
+    <circle cx="205" cy="389" r="18" fill="#A6856F" />
+    <path d="M 200 389 L 204 393 L 211 385" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="232" y="382" font-family="'Montserrat', sans-serif" font-weight="700" font-size="11" fill="#2C2C2C">Core Web Vitals</text>
+    <text x="232" y="397" font-family="'Roboto', sans-serif" font-size="9" fill="#8E6C57">LCP &lt; 1.2s • FID &lt; 50ms</text>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%" role="img" aria-label="E-Commerce Experience platform preview">
+  <defs>
+    <linearGradient id="p2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2F0EA" />
+      <stop offset="100%" stop-color="#EBE7DE" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" rx="8" fill="url(#p2Grad)" stroke="#E0DDD8" stroke-width="1.5" />
+  <!-- Storefront Header -->
+  <rect x="25" y="20" width="350" height="30" rx="6" fill="#FFFFFF" stroke="#E0DDD8" />
+  <rect x="40" y="30" width="60" height="10" rx="3" fill="#A6856F" />
+  <rect x="120" y="32" width="35" height="6" rx="2" fill="#78736E" />
+  <rect x="165" y="32" width="35" height="6" rx="2" fill="#78736E" />
+  <rect x="210" y="32" width="35" height="6" rx="2" fill="#78736E" />
+  <circle cx="345" cy="35" r="7" fill="#A0D4E0" />
+
+  <!-- Product card showcase -->
+  <rect x="25" y="65" width="105" height="160" rx="8" fill="#FFFFFF" stroke="#E0DDD8" />
+  <rect x="35" y="75" width="85" height="75" rx="6" fill="#F9F8F6" />
+  <circle cx="77" cy="112" r="22" fill="#A6856F" opacity="0.3" />
+  <rect x="35" y="160" width="60" height="8" rx="2" fill="#2C2C2C" />
+  <rect x="35" y="174" width="40" height="6" rx="2" fill="#A6856F" />
+  <rect x="35" y="192" width="85" height="22" rx="5" fill="#A6856F" />
+
+  <rect x="145" y="65" width="105" height="160" rx="8" fill="#FFFFFF" stroke="#E0DDD8" />
+  <rect x="155" y="75" width="85" height="75" rx="6" fill="#F9F8F6" />
+  <circle cx="197" cy="112" r="22" fill="#A0D4E0" opacity="0.4" />
+  <rect x="155" y="160" width="65" height="8" rx="2" fill="#2C2C2C" />
+  <rect x="155" y="174" width="45" height="6" rx="2" fill="#A6856F" />
+  <rect x="155" y="192" width="85" height="22" rx="5" fill="#2C2C2C" />
+
+  <rect x="265" y="65" width="110" height="160" rx="8" fill="#FFFFFF" stroke="#E0DDD8" />
+  <rect x="275" y="75" width="90" height="75" rx="6" fill="#F9F8F6" />
+  <circle cx="320" cy="112" r="22" fill="#A6856F" opacity="0.2" />
+  <rect x="275" y="160" width="70" height="8" rx="2" fill="#2C2C2C" />
+  <rect x="275" y="174" width="50" height="6" rx="2" fill="#A6856F" />
+  <rect x="275" y="192" width="90" height="22" rx="5" fill="#A6856F" />
+</svg>

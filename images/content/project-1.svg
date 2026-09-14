@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%" role="img" aria-label="Enterprise Cloud Analytics Dashboard preview">
+  <defs>
+    <linearGradient id="p1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F8F6" />
+      <stop offset="100%" stop-color="#F2F0EA" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" rx="8" fill="url(#p1Grad)" stroke="#E0DDD8" stroke-width="1.5" />
+  <!-- Header bar -->
+  <rect x="20" y="20" width="360" height="24" rx="6" fill="#FFFFFF" stroke="#E0DDD8" />
+  <circle cx="34" cy="32" r="4" fill="#A6856F" />
+  <rect x="46" y="28" width="80" height="8" rx="3" fill="#2C2C2C" />
+  <rect x="320" y="26" width="50" height="12" rx="6" fill="#A0D4E0" />
+
+  <!-- Metric widgets -->
+  <rect x="20" y="56" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#E0DDD8" />
+  <rect x="30" y="66" width="40" height="6" rx="2" fill="#78736E" />
+  <text x="30" y="94" font-family="'Montserrat', sans-serif" font-weight="700" font-size="16" fill="#A6856F">99.98%</text>
+  <text x="30" y="106" font-family="'Roboto', sans-serif" font-size="8" fill="#4B9B82">+14.2% uptime</text>
+
+  <rect x="145" y="56" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#E0DDD8" />
+  <rect x="155" y="66" width="50" height="6" rx="2" fill="#78736E" />
+  <text x="155" y="94" font-family="'Montserrat', sans-serif" font-weight="700" font-size="16" fill="#2C2C2C">42.8ms</text>
+  <text x="155" y="106" font-family="'Roboto', sans-serif" font-size="8" fill="#4B9B82">Zero latency</text>
+
+  <rect x="270" y="56" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#E0DDD8" />
+  <rect x="280" y="66" width="45" height="6" rx="2" fill="#78736E" />
+  <text x="280" y="94" font-family="'Montserrat', sans-serif" font-weight="700" font-size="16" fill="#A6856F">2.4M</text>
+  <text x="280" y="106" font-family="'Roboto', sans-serif" font-size="8" fill="#A0D4E0">Daily requests</text>
+
+  <!-- Large Chart Graph -->
+  <rect x="20" y="128" width="360" height="102" rx="6" fill="#FFFFFF" stroke="#E0DDD8" />
+  <line x1="40" y1="205" x2="360" y2="205" stroke="#E0DDD8" stroke-width="1" />
+  <line x1="40" y1="175" x2="360" y2="175" stroke="#E0DDD8" stroke-width="1" stroke-dasharray="3 3" />
+  <line x1="40" y1="145" x2="360" y2="145" stroke="#E0DDD8" stroke-width="1" stroke-dasharray="3 3" />
+  
+  <path d="M 40 195 Q 100 150, 160 170 T 260 145 T 360 135" fill="none" stroke="#A6856F" stroke-width="3" stroke-linecap="round" />
+  <path d="M 40 200 Q 110 185, 170 180 T 270 160 T 360 150" fill="none" stroke="#A0D4E0" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="260" cy="145" r="4" fill="#A6856F" stroke="#FFFFFF" stroke-width="2" />
+</svg>

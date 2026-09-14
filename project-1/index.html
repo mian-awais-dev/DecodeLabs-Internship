@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DecodeLabs - High-performance, accessible, and responsive frontend digital architecture built with pure HTML5, CSS3, and Vanilla JavaScript.">
+  <meta name="theme-color" content="#A6856F">
+
+  <title>DecodeLabs | Modern Responsive Frontend Interface</title>
+
+  <!-- Google Fonts: Montserrat (Headlines) & Roboto (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Navigation Link for Screen Readers and Keyboard Users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main navigation">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand" aria-label="DecodeLabs Home">
+        <img src="images/logo.svg" alt="DecodeLabs Logo" class="brand-logo" width="168" height="42">
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary links">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#hero" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (CTA & Mobile Toggle) -->
+      <div class="header-actions">
+        <a href="#contact" class="btn btn--primary btn--header">Get Started</a>
+
+        <!-- Hamburger Toggle Button (Mobile < 768px) -->
+        <button type="button" 
+                class="hamburger-toggle" 
+                id="hamburger-toggle" 
+                aria-expanded="false" 
+                aria-controls="nav-menu" 
+                aria-label="Open navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main class="main-content" id="main-content" role="main">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="hero-badge-pulse" aria-hidden="true"></span>
+              <span>DecodeLabs Engineering • 2026 Edition</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-heading">
+              Architecting <span class="hero-title-highlight">Modern Digital</span> Experiences with Precision
+            </h1>
+
+            <p class="hero-subtitle">
+              Engineered with pure HTML5, CSS3 Grid &amp; Flexbox, and Vanilla JavaScript. Zero runtime overhead, 100% responsive, and built for ultra-fast performance.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#portfolio" class="btn btn--primary">Explore Work</a>
+              <a href="#contact" class="btn btn--outline">Request Consultation</a>
+            </div>
+
+            <!-- Real-time Hero Performance Metrics -->
+            <div class="hero-stats" role="region" aria-label="Key Performance Indicators">
+              <div class="hero-stat-item">
+                <span class="hero-stat-number" data-count="99.9">99.9%</span>
+                <span class="hero-stat-label">Core Vitals Score</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-number" data-count="100">0</span>
+                <span class="hero-stat-label">Framework-Free</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-number" data-count="45">45ms</span>
+                <span class="hero-stat-label">Average Load Time</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Graphic Visual -->
+          <div class="hero-visual">
+            <img src="images/hero/hero-illustration.svg" 
+                 alt="Illustration of modern responsive desktop and mobile dashboards built with CSS Grid" 
+                 class="hero-image" 
+                 width="600" 
+                 height="480"
+                 loading="eager">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section section--alt" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Engineering Philosophy</span>
+          <h2 id="about-heading">Built on Principles of Speed, Accessibility &amp; Standards</h2>
+          <p class="section-description">
+            At DecodeLabs, we prioritize structural clarity, progressive enhancement, and resilient browser compatibility above transient framework churn.
+          </p>
+        </div>
+
+        <div class="split-layout">
+          <!-- Left Visual Canvas -->
+          <div class="split-visual">
+            <img src="images/content/about-team.svg" 
+                 alt="DecodeLabs architecture overview showcasing semantic HTML5, WCAG AA compliance, and modular CSS" 
+                 class="split-image" 
+                 width="500" 
+                 height="360"
+                 loading="lazy">
+          </div>
+
+          <!-- Right Content Column -->
+          <div class="split-content">
+            <h3>Pure Web Fundamentals</h3>
+            <p>
+              Modern web platforms often accumulate layers of unnecessary abstraction. Our architectural approach leverages the native powers of CSS Grid, Flexbox layouts, and ES6+ browser APIs to deliver enterprise-grade speed with minimal footprint.
+            </p>
+
+            <ul class="feature-list" style="display: flex; flex-direction: column; gap: var(--spacing-sm); margin-bottom: var(--spacing-lg);">
+              <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--color-text-dark);">
+                <img src="images/icons/icon-speed.svg" alt="" width="20" height="20" aria-hidden="true">
+                <strong>Sub-100ms Interactions:</strong> Smooth 60fps animations with hardware acceleration.
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--color-text-dark);">
+                <img src="images/icons/icon-shield.svg" alt="" width="20" height="20" aria-hidden="true">
+                <strong>WCAG AA Compliance:</strong> Full keyboard navigation, ARIA semantics, and contrast ratios &gt; 4.5:1.
+              </li>
+              <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--color-text-dark);">
+                <img src="images/icons/icon-mobile.svg" alt="" width="20" height="20" aria-hidden="true">
+                <strong>Mobile-First Fluid Layouts:</strong> Pixel-perfect scaling from 320px to 4K displays.
+              </li>
+            </ul>
+
+            <a href="#services" class="btn btn--secondary">Discover Our Services</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Core Capabilities</span>
+          <h2 id="services-heading">Comprehensive Frontend Engineering</h2>
+          <p class="section-description">
+            Tailored architectures that convert complex business logic into intuitive, hyper-responsive interfaces.
+          </p>
+        </div>
+
+        <!-- 4-Column CSS Grid -->
+        <div class="content-grid content-grid--services">
+          
+          <!-- Service Card 1 -->
+          <article class="card card--service">
+            <div class="card-icon-box">
+              <img src="images/icons/icon-code.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="card-title">Responsive UI Engineering</h3>
+            <p class="card-text">
+              Mobile-first CSS Grid and Flexbox layouts structured for seamless adaptation across smart devices, tablets, and ultra-wide screens.
+            </p>
+            <div class="card-footer">
+              <a href="#contact" class="card-link">Learn More <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Service Card 2 -->
+          <article class="card card--service">
+            <div class="card-icon-box">
+              <img src="images/icons/icon-design.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="card-title">Design System Architecture</h3>
+            <p class="card-text">
+              Modular design tokens, custom properties, and standardized UI components ensuring cross-product aesthetic unity and brand cohesion.
+            </p>
+            <div class="card-footer">
+              <a href="#contact" class="card-link">Learn More <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Service Card 3 -->
+          <article class="card card--service">
+            <div class="card-icon-box">
+              <img src="images/icons/icon-speed.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="card-title">Performance &amp; Core Vitals</h3>
+            <p class="card-text">
+              Aggressive asset optimization, layout-shift elimination, and critical rendering path tuning achieving flawless 100 Lighthouse scores.
+            </p>
+            <div class="card-footer">
+              <a href="#contact" class="card-link">Learn More <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+          <!-- Service Card 4 -->
+          <article class="card card--service">
+            <div class="card-icon-box">
+              <img src="images/icons/icon-shield.svg" alt="" width="26" height="26" aria-hidden="true">
+            </div>
+            <h3 class="card-title">Accessibility &amp; WCAG AA</h3>
+            <p class="card-text">
+              Rigorous keyboard navigation, screen-reader parity, high contrast typography, and accessible form validations compliant with global standards.
+            </p>
+            <div class="card-footer">
+              <a href="#contact" class="card-link">Learn More <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION WITH SIDEBAR -->
+    <section class="section section--alt" id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Featured Deployments</span>
+          <h2 id="portfolio-heading">Showcase of Production Work</h2>
+          <p class="section-description">
+            Explore recent projects engineered with lightweight vanilla code, responsive grids, and modern aesthetics.
+          </p>
+        </div>
+
+        <!-- Sidebar + Content Layout Wrapper -->
+        <div class="sidebar-layout">
+          
+          <!-- Main Projects Column -->
+          <div class="main-column">
+            <div class="content-grid content-grid--portfolio">
+              
+              <!-- Project Card 1 -->
+              <article class="card card--portfolio">
+                <div class="card-media">
+                  <img src="images/content/project-1.svg" 
+                       alt="Preview of Enterprise Cloud Analytics Dashboard interface" 
+                       class="card-image" 
+                       width="400" 
+                       height="250"
+                       loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="card-tags">
+                    <span class="badge">CSS Grid</span>
+                    <span class="badge badge--secondary">Data Viz</span>
+                    <span class="badge">Vanilla ES6</span>
+                  </div>
+                  <h3 class="card-title">Enterprise Cloud Analytics</h3>
+                  <p class="card-text">
+                    High-density data visualization suite with real-time responsive charts and sub-second metrics tracking.
+                  </p>
+                  <div class="card-footer">
+                    <a href="#contact" class="card-link">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project Card 2 -->
+              <article class="card card--portfolio">
+                <div class="card-media">
+                  <img src="images/content/project-2.svg" 
+                       alt="Preview of Next-Gen E-Commerce storefront platform" 
+                       class="card-image" 
+                       width="400" 
+                       height="250"
+                       loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="card-tags">
+                    <span class="badge">E-Commerce</span>
+                    <span class="badge badge--secondary">Micro-Interactions</span>
+                    <span class="badge">Mobile-First</span>
+                  </div>
+                  <h3 class="card-title">Next-Gen Digital Storefront</h3>
+                  <p class="card-text">
+                    Frictionless checkout experience with accessible touch controls and fluid multi-column product grids.
+                  </p>
+                  <div class="card-footer">
+                    <a href="#contact" class="card-link">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project Card 3 -->
+              <article class="card card--portfolio">
+                <div class="card-media">
+                  <img src="images/content/project-3.svg" 
+                       alt="Preview of AI Neural Automation Workflow pipeline interface" 
+                       class="card-image" 
+                       width="400" 
+                       height="250"
+                       loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="card-tags">
+                    <span class="badge">AI Systems</span>
+                    <span class="badge badge--secondary">Workflow Canvas</span>
+                    <span class="badge">Performance</span>
+                  </div>
+                  <h3 class="card-title">Neural Workflow Automator</h3>
+                  <p class="card-text">
+                    Visual pipeline editor with zero-dependency vector node rendering and instantaneous drag feedback.
+                  </p>
+                  <div class="card-footer">
+                    <a href="#contact" class="card-link">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project Card 4 -->
+              <article class="card card--portfolio">
+                <div class="card-media">
+                  <img src="images/content/project-4.svg" 
+                       alt="Preview of Modular Design Tokens and UI Kit Library" 
+                       class="card-image" 
+                       width="400" 
+                       height="250"
+                       loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="card-tags">
+                    <span class="badge">Design Tokens</span>
+                    <span class="badge badge--secondary">WCAG AA</span>
+                    <span class="badge">CSS Variables</span>
+                  </div>
+                  <h3 class="card-title">Modular Enterprise UI Kit</h3>
+                  <p class="card-text">
+                    Comprehensive design library crafted with semantic HTML5 tokens and responsive 8px spacing rules.
+                  </p>
+                  <div class="card-footer">
+                    <a href="#contact" class="card-link">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Sticky Sidebar (Collapsible on Mobile, Fixed/Sticky on Desktop) -->
+          <aside class="sidebar" id="sidebar" aria-labelledby="sidebar-title">
+            <div class="sidebar-header">
+              <h3 class="sidebar-title" id="sidebar-title">Architecture Specs</h3>
+              <!-- Mobile collapse button -->
+              <button type="button" 
+                      class="sidebar-toggle-btn" 
+                      id="sidebar-toggle-btn" 
+                      aria-expanded="true" 
+                      aria-controls="sidebar-content" 
+                      aria-label="Toggle architecture specifications sidebar">
+                <span>Details</span>
+                <span aria-hidden="true">&#9662;</span>
+              </button>
+            </div>
+
+            <div class="sidebar-content" id="sidebar-content">
+              <div class="info-item">
+                <img src="images/icons/icon-speed.svg" alt="" class="info-item-icon" width="20" height="20" aria-hidden="true">
+                <div class="info-item-text">
+                  <strong>Zero Frameworks</strong>
+                  <p style="margin: 0; font-size: var(--font-size-xs); color: var(--color-text-muted);">No React, Vue, jQuery or Bootstrap bloat.</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <img src="images/icons/icon-design.svg" alt="" class="info-item-icon" width="20" height="20" aria-hidden="true">
+                <div class="info-item-text">
+                  <strong>Strict 8px Grid</strong>
+                  <p style="margin: 0; font-size: var(--font-size-xs); color: var(--color-text-muted);">Predictable spacing tokens from 4px to 80px.</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <img src="images/icons/icon-shield.svg" alt="" class="info-item-icon" width="20" height="20" aria-hidden="true">
+                <div class="info-item-text">
+                  <strong>Contrast Verified</strong>
+                  <p style="margin: 0; font-size: var(--font-size-xs); color: var(--color-text-muted);">#A6856F and #A0D4E0 calibrated for readability.</p>
+                </div>
+              </div>
+
+              <div style="background-color: var(--color-accent); padding: var(--spacing-md); border-radius: var(--radius-sm); border: var(--border-width) solid var(--color-border); margin-top: var(--spacing-sm);">
+                <p style="font-size: var(--font-size-xs); font-style: italic; margin-bottom: var(--spacing-xs); color: var(--color-text-dark);">
+                  &ldquo;DecodeLabs delivers precision engineering that scales across devices effortlessly.&rdquo;
+                </p>
+                <span style="font-size: var(--font-size-xs); font-weight: var(--font-weight-bold); color: var(--color-primary-dark);">&#8212; Tech Lead, 2026 Batch</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH ACCESSIBLE FORM -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 id="contact-heading">Let&rsquo;s Build Something Extraordinary</h2>
+          <p class="section-description">
+            Have a project in mind or need an architectural evaluation? Reach out to DecodeLabs today.
+          </p>
+        </div>
+
+        <div class="split-layout">
+          
+          <!-- Left Column: Official Contact Coordinates -->
+          <div class="contact-info">
+            <h3>Direct Contact Channels</h3>
+            <p>
+              Our team is ready to collaborate on your frontend systems, design tokens, and high-performance digital platforms.
+            </p>
+
+            <ul style="display: flex; flex-direction: column; gap: var(--spacing-md); margin-top: var(--spacing-lg);">
+              <li style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+                <div class="card-icon-box" style="width: 44px; height: 44px; flex-shrink: 0;">
+                  <img src="images/icons/icon-email.svg" alt="" width="20" height="20" aria-hidden="true">
+                </div>
+                <div>
+                  <span style="font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); font-weight: var(--font-weight-bold);">Email</span>
+                  <p style="margin: 0; font-weight: var(--font-weight-bold);">
+                    <a href="mailto:decodelabs.tech@gmail.com" class="footer-link" style="color: var(--color-text-dark);">decodelabs.tech@gmail.com</a>
+                  </p>
+                </div>
+              </li>
+
+              <li style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+                <div class="card-icon-box" style="width: 44px; height: 44px; flex-shrink: 0;">
+                  <img src="images/icons/icon-phone.svg" alt="" width="20" height="20" aria-hidden="true">
+                </div>
+                <div>
+                  <span style="font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); font-weight: var(--font-weight-bold);">Phone</span>
+                  <p style="margin: 0; font-weight: var(--font-weight-bold);">
+                    <a href="tel:+918933006408" class="footer-link" style="color: var(--color-text-dark);">+91 89330 06408</a>
+                  </p>
+                </div>
+              </li>
+
+              <li style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+                <div class="card-icon-box" style="width: 44px; height: 44px; flex-shrink: 0;">
+                  <img src="images/icons/icon-location.svg" alt="" width="20" height="20" aria-hidden="true">
+                </div>
+                <div>
+                  <span style="font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); font-weight: var(--font-weight-bold);">Location</span>
+                  <p style="margin: 0; font-weight: var(--font-weight-bold); color: var(--color-text-dark);">
+                    Greater Lucknow, India
+                  </p>
+                </div>
+              </li>
+
+              <li style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+                <div class="card-icon-box" style="width: 44px; height: 44px; flex-shrink: 0;">
+                  <img src="images/icons/icon-cloud.svg" alt="" width="20" height="20" aria-hidden="true">
+                </div>
+                <div>
+                  <span style="font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); font-weight: var(--font-weight-bold);">Official Portal</span>
+                  <p style="margin: 0; font-weight: var(--font-weight-bold);">
+                    <a href="https://www.decodelabs.tech" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--color-text-dark);">www.decodelabs.tech</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-card">
+            
+            <!-- Success Status Alert Banner -->
+            <div class="alert alert--success is-hidden" id="form-success-banner" role="alert" aria-live="polite">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <strong>Inquiry Transmitted Successfully!</strong>
+                <p style="margin: 0; font-size: var(--font-size-xs);">Thank you for contacting DecodeLabs. We will respond within 24 business hours.</p>
+              </div>
+            </div>
+
+            <form id="contact-form" novalidate aria-label="Contact DecodeLabs form">
+              
+              <!-- Full Name Field -->
+              <div class="form-group" id="group-name">
+                <label for="contact-name" class="form-label">
+                  Full Name <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" 
+                       id="contact-name" 
+                       name="name" 
+                       class="form-input" 
+                       placeholder="e.g. Alex Morgan" 
+                       required 
+                       aria-required="true" 
+                       aria-describedby="error-name"
+                       autocomplete="name">
+                <span class="form-error-msg" id="error-name" role="alert">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Please enter your full name (at least 2 characters).</span>
+                </span>
+              </div>
+
+              <!-- Email Address Field -->
+              <div class="form-group" id="group-email">
+                <label for="contact-email" class="form-label">
+                  Email Address <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <input type="email" 
+                       id="contact-email" 
+                       name="email" 
+                       class="form-input" 
+                       placeholder="alex@company.com" 
+                       required 
+                       aria-required="true" 
+                       aria-describedby="error-email"
+                       autocomplete="email">
+                <span class="form-error-msg" id="error-email" role="alert">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Please enter a valid email address (e.g., name@domain.com).</span>
+                </span>
+              </div>
+
+              <!-- Subject / Project Scope Field -->
+              <div class="form-group" id="group-subject">
+                <label for="contact-subject" class="form-label">
+                  Project Topic <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" 
+                       id="contact-subject" 
+                       name="subject" 
+                       class="form-input" 
+                       placeholder="e.g. Design System Implementation" 
+                       required 
+                       aria-required="true" 
+                       aria-describedby="error-subject">
+                <span class="form-error-msg" id="error-subject" role="alert">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Please specify a subject or topic for your project.</span>
+                </span>
+              </div>
+
+              <!-- Message Textarea Field -->
+              <div class="form-group" id="group-message">
+                <label for="contact-message" class="form-label">
+                  Project Details &amp; Message <span class="form-required" aria-hidden="true">*</span>
+                </label>
+                <textarea id="contact-message" 
+                          name="message" 
+                          class="form-textarea" 
+                          placeholder="Tell us about your requirements, timeline, and goals..." 
+                          required 
+                          aria-required="true" 
+                          aria-describedby="error-message"></textarea>
+                <span class="form-error-msg" id="error-message" role="alert">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Please enter your message (at least 10 characters).</span>
+                </span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn--primary btn--block" id="form-submit-btn">
+                <span>Send Message</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      
+      <!-- Multi-Column Grid on Desktop, Stacked on Mobile -->
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Bio -->
+        <div class="footer-brand">
+          <img src="images/logo.svg" alt="DecodeLabs Logo" width="160" height="40" style="filter: brightness(0) invert(1);">
+          <p>
+            Pioneering modern frontend digital architecture. We build zero-framework, accessible, responsive web solutions with pixel precision.
+          </p>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Capabilities -->
+        <div class="footer-column">
+          <h3 class="footer-heading">Capabilities</h3>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">CSS Grid Systems</a></li>
+            <li><a href="#services" class="footer-link">WCAG AA Accessibility</a></li>
+            <li><a href="#services" class="footer-link">Core Web Vitals</a></li>
+            <li><a href="#services" class="footer-link">Design System Tokens</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Official Contact Information -->
+        <div class="footer-column">
+          <h3 class="footer-heading">Contact DecodeLabs</h3>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:decodelabs.tech@gmail.com" class="footer-link">decodelabs.tech@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="tel:+918933006408" class="footer-link">+91 89330 06408</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Greater Lucknow, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <a href="https://www.decodelabs.tech" target="_blank" rel="noopener noreferrer" class="footer-link">www.decodelabs.tech</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Compliance Notice -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 DecodeLabs. All rights reserved. Built with pure HTML5, CSS3 &amp; Vanilla JavaScript.</p>
+        <p>Batch 2026 • Intermediate Level • Antigravity AI Code Generation</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT ARCHITECTURE (ORDER PRESERVED)
+       ========================================================================== -->
+  <script src="js/utils.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

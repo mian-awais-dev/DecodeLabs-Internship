@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" role="img" aria-label="DecodeLabs Logo">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A6856F" />
+      <stop offset="100%" stop-color="#8E6C57" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A0D4E0" />
+      <stop offset="100%" stop-color="#6FB9C8" />
+    </linearGradient>
+  </defs>
+  <!-- Icon Mark: Modern Hexagonal / Tech Brackets Symbol -->
+  <g transform="translate(6, 6)">
+    <!-- Rounded Background Cube/Hexagon Accent -->
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#brandGrad)" />
+    <!-- Secondary Glow Inner Accent -->
+    <rect x="3" y="3" width="42" height="42" rx="9" fill="none" stroke="#A0D4E0" stroke-width="1.5" stroke-opacity="0.6" />
+    <!-- Code Bracket and Dot Tech Motif -->
+    <path d="M18 16 L12 24 L18 32" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M30 16 L36 24 L30 32" fill="none" stroke="#A0D4E0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="24" cy="24" r="2.5" fill="#FFFFFF" />
+  </g>
+  <!-- Brand Typography -->
+  <text x="66" y="34" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.5" fill="#2C2C2C">
+    Decode<tspan fill="#A6856F">Labs</tspan>
+  </text>
+  <text x="68" y="47" font-family="'Roboto', 'Open Sans', -apple-system, sans-serif" font-weight="500" font-size="9" letter-spacing="1.8" fill="#78736E">
+    DIGITAL ARCHITECTURE
+  </text>
+</svg>

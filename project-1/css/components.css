@@ -1,0 +1,385 @@
+/**
+ * DecodeLabs Project 1 - Component Styles
+ *
+ * Encapsulates interactive UI components: Buttons, Cards, Forms, Badges,
+ * and Status Messages adhering to WCAG AA accessibility standards.
+ */
+
+/* ==========================================================================
+   1. Buttons & Interactive Controls
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  text-decoration: none;
+  min-height: 46px; /* Accessibility standard >= 44px */
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  border: var(--border-width-thick) solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--transition-standard),
+              border-color var(--transition-standard),
+              color var(--transition-standard),
+              box-shadow var(--transition-standard),
+              transform var(--transition-standard);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Primary Button (Mocha Mousse) */
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(166, 133, 111, 0.28);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 6px 16px rgba(142, 108, 87, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Secondary Button (Ethereal Blue Accent) */
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  box-shadow: 0 4px 10px rgba(160, 212, 224, 0.3);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-secondary-dark);
+  box-shadow: 0 6px 16px rgba(116, 184, 199, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Outline Button */
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary-subtle);
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Header Compact CTA Button */
+.btn--header {
+  min-height: 40px;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.5px;
+}
+
+/* Full Width Button Modifier */
+.btn--block {
+  width: 100%;
+}
+
+/* Loading State on Button */
+.btn.is-loading {
+  pointer-events: none;
+  opacity: 0.85;
+  position: relative;
+  color: transparent !important;
+}
+
+.btn.is-loading::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: calc(50% - 9px);
+  left: calc(50% - 9px);
+  border: 2px solid #FFFFFF;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: btnSpinner 650ms linear infinite;
+}
+
+@keyframes btnSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+   2. Card Components
+   ========================================================================== */
+
+.card {
+  background-color: var(--color-bg-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-standard),
+              box-shadow var(--transition-standard),
+              border-color var(--transition-standard);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary-light);
+}
+
+/* Service Card Variant */
+.card--service {
+  gap: var(--spacing-md);
+}
+
+.card-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent);
+  border: var(--border-width) solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-standard), border-color var(--transition-standard);
+}
+
+.card:hover .card-icon-box {
+  background-color: var(--color-secondary-subtle);
+  border-color: var(--color-secondary);
+}
+
+.card-icon-box svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--color-primary);
+  transition: stroke var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover .card-icon-box svg {
+  stroke: var(--color-text-dark);
+  transform: scale(1.08);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  flex-grow: 1;
+}
+
+.card-footer {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: var(--border-width) solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-link {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: gap var(--transition-fast);
+}
+
+.card-link:hover {
+  gap: var(--spacing-sm);
+}
+
+/* Portfolio Card Variant */
+.card--portfolio {
+  padding: 0;
+}
+
+.card-media {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-accent);
+  aspect-ratio: 16 / 10;
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.card:hover .card-image {
+  transform: scale(1.04);
+}
+
+.card-body {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.badge {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent);
+  color: var(--color-text-muted);
+}
+
+.badge--secondary {
+  background-color: var(--color-secondary-subtle);
+  color: #2F6B78;
+}
+
+/* ==========================================================================
+   3. Contact Form & Field Validation
+   ========================================================================== */
+
+.contact-card {
+  background-color: var(--color-bg-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+}
+
+.form-required {
+  color: var(--color-error);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  min-height: 48px; /* Touch target >= 44px */
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-bg-page);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  color: var(--color-text-dark);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background-color: #FFFFFF;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+/* Error State */
+.form-group.has-error .form-input,
+.form-group.has-error .form-textarea {
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.form-error-msg {
+  display: none;
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+  font-weight: var(--font-weight-medium);
+  margin-top: 2px;
+}
+
+.form-group.has-error .form-error-msg {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* Success Alert Banner */
+.alert {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.alert--success {
+  background-color: var(--color-success-bg);
+  border: var(--border-width) solid var(--color-success);
+  color: #1A543E;
+}
+
+.alert.is-hidden {
+  display: none;
+}
+
+/* Info Box in Sidebar */
+.info-item {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: flex-start;
+}
+
+.info-item-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.info-item-text {
+  font-size: var(--font-size-sm);
+}
