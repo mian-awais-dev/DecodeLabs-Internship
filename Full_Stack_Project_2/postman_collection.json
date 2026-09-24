@@ -1,0 +1,297 @@
+{
+  "info": {
+    "name": "Products Backend API (Project 2)",
+    "description": "Complete Postman collection for testing the Products REST API project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "adminToken",
+      "value": "admin-token-secret-123",
+      "type": "string"
+    },
+    {
+      "key": "viewerToken",
+      "value": "viewer-token-secret-456",
+      "type": "string"
+    },
+    {
+      "key": "adminApiKey",
+      "value": "api-key-admin",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. System & Info",
+      "item": [
+        {
+          "name": "Health Check (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            }
+          }
+        },
+        {
+          "name": "API Root Info (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": ["{{baseUrl}}"],
+              "path": [""]
+            }
+          }
+        },
+        {
+          "name": "Get Allowed Categories (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products/categories",
+              "host": ["{{baseUrl}}"],
+              "path": ["products", "categories"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Products - Read (GET)",
+      "item": [
+        {
+          "name": "Get All Products (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "Filter by Category & Price (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products?category=electronics&minPrice=100&maxPrice=1500&sortBy=price&order=asc",
+              "host": ["{{baseUrl}}"],
+              "path": ["products"],
+              "query": [
+                { "key": "category", "value": "electronics" },
+                { "key": "minPrice", "value": "100" },
+                { "key": "maxPrice", "value": "1500" },
+                { "key": "sortBy", "value": "price" },
+                { "key": "order", "value": "asc" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search & Paginate (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products?search=MacBook&page=1&limit=5",
+              "host": ["{{baseUrl}}"],
+              "path": ["products"],
+              "query": [
+                { "key": "search", "value": "MacBook" },
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "5" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Product by ID (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products/prod_1001",
+              "host": ["{{baseUrl}}"],
+              "path": ["products", "prod_1001"]
+            }
+          }
+        },
+        {
+          "name": "Get Non-existent Product (404 Not Found)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products/prod_non_existent",
+              "host": ["{{baseUrl}}"],
+              "path": ["products", "prod_non_existent"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Products - Mutations (POST, PUT, DELETE)",
+      "item": [
+        {
+          "name": "Create Product - Admin Token (201 Created)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{adminToken}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Logitech MX Master 3S Mouse\",\n  \"description\": \"Quiet clicks and 8K DPI any-surface tracking.\",\n  \"price\": 99.99,\n  \"category\": \"electronics\",\n  \"inStock\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "Create Product - Missing Auth (401 Unauthorized)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Unauthenticated Product\",\n  \"price\": 49.99,\n  \"category\": \"books\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "Create Product - Viewer Role (403 Forbidden)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{viewerToken}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Forbidden Product\",\n  \"price\": 49.99,\n  \"category\": \"books\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "Create Product - Validation Error (400 Bad Request)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{adminToken}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"\",\n  \"price\": -50,\n  \"category\": \"invalid-category\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["products"]
+            }
+          }
+        },
+        {
+          "name": "Update Product - Admin (200 OK)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "x-api-key", "value": "{{adminApiKey}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Sony WH-1000XM5 (Midnight Silver Edition)\",\n  \"description\": \"Upgraded premium finish.\",\n  \"price\": 379.99,\n  \"category\": \"electronics\",\n  \"inStock\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products/prod_1001",
+              "host": ["{{baseUrl}}"],
+              "path": ["products", "prod_1001"]
+            }
+          }
+        },
+        {
+          "name": "Delete Product - Admin (204 No Content)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{adminToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/products/prod_1001",
+              "host": ["{{baseUrl}}"],
+              "path": ["products", "prod_1001"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Nested Resources - Reviews",
+      "item": [
+        {
+          "name": "Get Product Reviews (200 OK)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products/prod_1002/reviews",
+              "host": ["{{baseUrl}}"],
+              "path": ["products", "prod_1002", "reviews"]
+            }
+          }
+        },
+        {
+          "name": "Add Product Review (201 Created)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 5,\n  \"comment\": \"Blazing fast performance and all-day battery life!\",\n  \"author\": \"PowerUser\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products/prod_1002/reviews",
+              "host": ["{{baseUrl}}"],
+              "path": ["products", "prod_1002", "reviews"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
